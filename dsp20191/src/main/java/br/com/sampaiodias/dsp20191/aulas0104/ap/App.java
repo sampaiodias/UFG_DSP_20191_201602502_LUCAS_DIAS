@@ -9,6 +9,7 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
@@ -25,19 +26,28 @@ public class App {
         String conteudo = "Teste";
         String caminho = "src/main/resources/exemplo.txt";
 
+        criarArquivo(caminho, conteudo);    
+        System.out.println("Conteúdo do arquivo: ");
+        imprimirConteudo(getConteudo(caminho));
+    }      
+
+    public static BufferedReader getConteudo(String caminho) throws FileNotFoundException, IOException {
+        FileReader fileReader = new FileReader(caminho);
+        BufferedReader br = new BufferedReader(fileReader);
+        return br;
+    }      
+
+    public static void imprimirConteudo(BufferedReader br) throws IOException {
+        String linha;
+        while ((linha = br.readLine()) != null) {
+            System.out.println(linha);
+        }
+    }      
+
+    public static void criarArquivo(String caminho, String conteudo) {
         try (FileWriter fileWriter = new FileWriter(caminho)) {
             PrintWriter printWriter = new PrintWriter(fileWriter);
             printWriter.write(conteudo);
-        } catch(Exception e){System.out.println(e);}    
-        
-        System.out.println("Conteúdo do arquivo: ");
-        
-        FileReader fileReader = new FileReader(caminho);
-        BufferedReader br = new BufferedReader(fileReader);
-        String linha;
-
-        while ((linha = br.readLine()) != null) {
-                System.out.println(linha);
-        }
-    }      
+        } catch(Exception e){System.out.println(e);}
+    }
 }
