@@ -31,9 +31,9 @@ public class as {
             i++;
         }
         
-        for(UnidadeFederacao uf : ufs){
-		System.out.println(uf.toString());
-	}
+        ufs.forEach((uf) -> {
+            System.out.println(uf.toString());
+        });
     }
 
     private static UnidadeFederacao getUnidadeFederacao(String linha) 
