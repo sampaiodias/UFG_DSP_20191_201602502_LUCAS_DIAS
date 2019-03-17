@@ -1,18 +1,19 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Copyright (c) 2019.
+ * Instituto de Informática (UFG)
+ * Creative Commons Attribution 4.0 International License.
  */
-package br.com.sampaiodias.dsp20191.aulas0104.ap;
+package main.java.br.com.sampaiodias.dsp20191.aulas0104.ap;
 
-import java.io.FileOutputStream;
 import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.FileReader;
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintStream;
 
 /**
- *
+ * Resolve o exercício inicial da disciplina de criar, escrever e ler
+ * em um arquivo txt.
  * @author Lucas Sampaio Dias
  */
 public class App {
@@ -21,13 +22,22 @@ public class App {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-        String thing = "exemplo";
-        String dir = App.class.getResource("/").getFile();
-        //String dir = WriteResource.class.getResource("/dir").getFile();
-        OutputStream os = new FileOutputStream("src/com/main/resources/exemplo.txt");
-        final PrintStream printStream = new PrintStream(os);
-        printStream.println(thing);
-        printStream.close();
-    }
-    
+        String conteudo = "Teste";
+        String caminho = "src/main/resources/exemplo.txt";
+
+        try (FileWriter fileWriter = new FileWriter(caminho)) {
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+            printWriter.write(conteudo);
+        } catch(Exception e){System.out.println(e);}    
+        
+        System.out.println("Conteúdo do arquivo: ");
+        
+        FileReader fileReader = new FileReader(caminho);
+        BufferedReader br = new BufferedReader(fileReader);
+        String linha;
+
+        while ((linha = br.readLine()) != null) {
+                System.out.println(linha);
+        }
+    }      
 }
