@@ -25,4 +25,10 @@ public class Aluno {
     public boolean isAprovado() {
         return (nota1 + nota2) / 2 >= 5.0f;
     }
+    
+    @Override
+    public String toString() {
+        return matricula + " - " + nome + " - Aprovado: " + isAprovado() + " (" 
+                + nota1 + " ; " + nota2 + ")"; 
+    }
 }
