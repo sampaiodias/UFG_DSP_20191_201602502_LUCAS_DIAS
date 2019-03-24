@@ -6,9 +6,16 @@
 package br.com.sampaiodias.dsp2019.aulas0508.as;
 
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
@@ -18,10 +25,35 @@ import java.util.StringTokenizer;
  */
 public class App {
     public static void main(String[] args) throws IOException {
-        ArrayList<Aluno> alunos = getAlunosNoArquivo("avaliacao.dat");
+        String arquivo = "avaliacao.dat";
+        App app = new App();
+        app.salvarAlunos("Maria,201900002,6.0,5.5", arquivo);
+        
+        ArrayList<Aluno> alunos = getAlunosNoArquivo(arquivo);
         alunos.forEach((aluno) -> {
             System.out.println(aluno.toString());
         });
+    }
+    
+    public void salvarAlunos(String alunos, String arquivo) {
+        String content = alunos;
+        File file = new File("src/main/resources/" + arquivo);
+
+        try (FileOutputStream fop = new FileOutputStream(file)) {
+
+                if (!file.exists()) {
+                        file.createNewFile();
+                }
+                
+            try (DataOutputStream data = new DataOutputStream(fop)) {
+                data.writeUTF(content);
+                data.flush();
+                data.close();
+            }
+
+        } catch (Exception e) {
+                e.printStackTrace();
+        }
     }
     
     public static ArrayList<Aluno> getAlunosNoArquivo(String arquivo) 
