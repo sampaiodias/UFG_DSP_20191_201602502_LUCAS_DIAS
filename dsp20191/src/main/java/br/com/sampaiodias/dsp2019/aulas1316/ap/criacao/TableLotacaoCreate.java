@@ -21,7 +21,7 @@ public class TableLotacaoCreate extends PersistenciaJdbc{
                 "ID LONG NOT NULL PRIMARY KEY,\n" +
                 "ID_CARGO LONG NOT NULL,\n" +
                 "ID_DEPARTAMENTO LONG NOT NULL,\n" +
-                "DATA_INICIAL VARCHAR(10) NOT NULL\n" +
+                "DATA_INICIAL VARCHAR(10) NOT NULL,\n" +
                 "DATA_FINAL VARCHAR(10) NOT NULL\n" +
                 ")";
 

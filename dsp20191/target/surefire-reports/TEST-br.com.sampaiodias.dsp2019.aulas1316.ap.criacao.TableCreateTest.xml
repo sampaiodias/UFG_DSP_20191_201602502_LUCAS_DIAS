@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" time="0.066" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" time="0.269" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_91\jre\bin"/>
@@ -16,7 +16,7 @@
     <property name="sun.os.patch.level" value=""/>
     <property name="test" value="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Alunoinf_2\Documents\UFG_DSP_20191_201602502_LUCAS_DIAS\dsp"/>
+    <property name="user.dir" value="C:\Users\Alunoinf_2\Documents\UFG_DSP_20191_201602502_LUCAS_DIAS\dsp20191"/>
     <property name="java.runtime.version" value="1.8.0_91-b15"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_91\jre\lib\endorsed"/>
@@ -62,5 +62,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" name="criaCargoTest" time="0.001"/>
+  <testcase classname="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" name="criaCargoTest" time="0.179"/>
+  <testcase classname="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" name="criaLotacaoTest" time="0.014"/>
+  <testcase classname="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" name="criaDepartamentoTest" time="0.008"/>
+  <testcase classname="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" name="criaFuncionarioTest" time="0.008"/>
 </testsuite>

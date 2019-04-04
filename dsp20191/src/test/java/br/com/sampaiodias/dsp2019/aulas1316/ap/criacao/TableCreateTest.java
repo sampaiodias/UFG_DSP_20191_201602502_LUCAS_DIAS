@@ -12,10 +12,52 @@ import org.junit.Test;
  * @author Lucas Sampaio Dias
  */
 public class TableCreateTest {
-    boolean result;
     
     @Test
     public void criaCargoTest() {
-        Assert.assertTrue(true);
+        boolean result;
+        try{
+            result = new TableCargoCreate().criaTabela();
+        }catch (Exception e){
+            result = false;
+            e.printStackTrace();
+        }
+        Assert.assertTrue(result);
+    }
+    
+    @Test
+    public void criaFuncionarioTest() {
+        boolean result;
+        try{
+            result = new TableFuncionarioCreate().criaTabela();
+        }catch (Exception e){
+            result = false;
+            e.printStackTrace();
+        }
+        Assert.assertTrue(result);
+    }
+    
+    @Test
+    public void criaDepartamentoTest() {
+        boolean result;
+        try{
+            result = new TableDepartamentoCreate().criaTabela();
+        }catch (Exception e){
+            result = false;
+            e.printStackTrace();
+        }
+        Assert.assertTrue(result);
+    }
+    
+    @Test
+    public void criaLotacaoTest() {
+        boolean result;
+        try{
+            result = new TableLotacaoCreate().criaTabela();
+        }catch (Exception e){
+            result = false;
+            e.printStackTrace();
+        }
+        Assert.assertTrue(result);
     }
 }
