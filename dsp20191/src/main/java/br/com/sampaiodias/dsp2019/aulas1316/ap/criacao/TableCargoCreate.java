@@ -15,16 +15,16 @@ public class TableCargoCreate extends PersistenciaJdbc {
 
         preparaPersistencia();
 
-        System.out.println("Criando a tabela Cargos");
+        System.out.println("Criando a tabela Cargo");
 
-        String sql = "CREATE TABLE IF NOT EXISTS CARGOS(\n" +
+        String sql = "CREATE TABLE IF NOT EXISTS CARGO(\n" +
                 "ID LONG NOT NULL PRIMARY KEY,\n" +
                 "NOME VARCHAR(100) NOT NULL\n" +
                 ")";
 
         stmt.executeUpdate(sql);
 
-        System.out.println("Tabela Cargos criada com sucesso!");
+        System.out.println("Tabela Cargo criada com sucesso!");
 
         //STEP 4: Clean-up environment
         stmt.close();
