@@ -11,10 +11,10 @@ package br.com.sampaiodias.dsp2019.aulas1316.ap.model;
 public class Funcionario {
     
     private Long id;
-    private String nome;
     private Long matricula;
+    private String nome;
 
-    public Funcionario(Long id, String nome, Long matricula) {
+    public Funcionario(Long id, Long matricula, String nome) {
         this.id = id;
         this.nome = nome;
         this.matricula = matricula;
