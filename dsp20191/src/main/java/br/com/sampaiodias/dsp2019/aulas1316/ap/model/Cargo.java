@@ -10,19 +10,19 @@ package br.com.sampaiodias.dsp2019.aulas1316.ap.model;
  */
 public class Cargo {
     
-    private String id;
+    private Long id;
     private String nome;
 
-    public Cargo(String id, String nome) {
+    public Cargo(Long id, String nome) {
         this.id = id;
         this.nome = nome;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

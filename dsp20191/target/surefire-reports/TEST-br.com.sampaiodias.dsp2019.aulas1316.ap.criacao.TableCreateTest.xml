@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" time="0.27" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" time="0.251" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_91\jre\bin"/>
-    <property name="java.vm.version" value="25.91-b15"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_151\jre\bin"/>
+    <property name="java.vm.version" value="25.151-b12"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\UFG_DSP_20191_201602502_LUCAS_DIAS\dsp20191"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -14,47 +15,47 @@
     <property name="user.country" value="BR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="test" value="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.**.*Test"/>
+    <property name="test" value="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.**.*Test,br.com.sampaiodias.dsp2019.aulas1316.ap.delete.**.*Test,br.com.sampaiodias.dsp2019.aulas1316.ap.exclusao.**.*Test,br.com.sampaiodias.dsp2019.aulas1316.ap.insercao.**.*Test"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Alunoinf_2\Documents\UFG_DSP_20191_201602502_LUCAS_DIAS\dsp20191"/>
-    <property name="java.runtime.version" value="1.8.0_91-b15"/>
+    <property name="user.dir" value="D:\UFG_DSP_20191_201602502_LUCAS_DIAS\dsp20191"/>
+    <property name="java.runtime.version" value="1.8.0_151-b12"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_91\jre\lib\endorsed"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_151\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\ALUNOI~1\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\Lucas\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.1\java\maven-nblib\netbeans-eventspy.jar"/>
-    <property name="classworlds.conf" value="C:\Program Files\NetBeans 8.1\java\maven\bin\m2.conf"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="C:\apache-maven-3.3.9\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_91\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\iis express\PHP\v7.0;C:\Perl64\site\bin;C:\Perl64\bin;C:\Program Files\Java\jdk1.8.0_91\bin;C:\jflex-1.6.1\bin;C:\mvn\apache-maven-3.3.9\bin;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\scala\bin;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 &amp; MySQL Utilities 1.5\;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 &amp; MySQL Utilities 1.5\Doctrine extensions for PHP\;C:\php\;C:\Program Files (x86)\Microsoft VS Code\bin;C:\sqlite;C:\Lua\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\SQLPlus Instant Client;C:\Program Files\MATLAB\R2014a\bin;C:\Program Files\nodejs\;C:\Users\Alunoinf_2\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\Alunoinf_2\AppData\Local\Programs\Python\Python36-32\;C:\Ruby23\bin;C:\Users\Alunoinf_2\AppData\Local\Programs\Python\Python35-32\Scripts\;C:\Users\Alunoinf_2\AppData\Local\Programs\Python\Python35-32\;C:\Ruby23-x64\bin;C:\Users\Alunoinf_2\AppData\Local\Microsoft\WindowsApps;C:\Users\Alunoinf_2\AppData\Local\Programs\Git\cmd;C:\Users\Alunoinf_2\AppData\Roaming\npm;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\programdata\oracle\java\javapath;c:\windows\system32;c:\windows;c:\windows\system32\wbem;c:\windows\system32\windowspowershell\v1.0\;c:\program files (x86)\gtksharp\2.12\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\wbem;C:\WINDOWS\system32\windowspowershell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\Lucas\Downloads\protoc-3.6.1-win32\bin;D:\TDM-GCC-64\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\SourceGear\Common\DiffMerge\;C:\Program Files\Git\cmd;C:\Users\Lucas\AppData\Local\Microsoft\WindowsApps;C:\Users\Lucas\AppData\Local\GitHubDesktop\bin;C:\Users\Lucas\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Users\Lucas\AppData\Roaming\npm;C:\Users\Lucas\AppData\Local\Programs\Microsoft VS Code\bin;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="user.home" value="C:\Users\Alunoinf_2"/>
+    <property name="user.home" value="C:\Users\Lucas"/>
     <property name="user.timezone" value="America/Sao_Paulo"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="user.name" value="Alunoinf_2"/>
-    <property name="java.class.path" value="C:\Program Files\NetBeans 8.1\java\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="user.name" value="Lucas"/>
+    <property name="java.class.path" value="C:\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_91\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.**.*Test -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.1\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_151\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.**.*Test,br.com.sampaiodias.dsp2019.aulas1316.ap.delete.**.*Test,br.com.sampaiodias.dsp2019.aulas1316.ap.exclusao.**.*Test,br.com.sampaiodias.dsp2019.aulas1316.ap.insercao.**.*Test -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="pt"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_91"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_91\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_91\jre\classes"/>
+    <property name="java.version" value="1.8.0_151"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_151\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_151\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_151\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_151\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_151\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_151\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_151\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_151\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_151\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Program Files\NetBeans 8.1\java\maven"/>
+    <property name="maven.home" value="C:\apache-maven-3.3.9"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -62,8 +63,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" name="criaCargoTest" time="0.182"/>
-  <testcase classname="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" name="criaLotacaoTest" time="0.005"/>
-  <testcase classname="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" name="criaDepartamentoTest" time="0.008"/>
-  <testcase classname="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" name="criaFuncionarioTest" time="0.007"/>
+  <testcase classname="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" name="criaCargoTest" time="0.2"/>
+  <testcase classname="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" name="criaLotacaoTest" time="0.013"/>
+  <testcase classname="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" name="criaDepartamentoTest" time="0.026"/>
+  <testcase classname="br.com.sampaiodias.dsp2019.aulas1316.ap.criacao.TableCreateTest" name="criaFuncionarioTest" time="0.012"/>
 </testsuite>
