@@ -13,7 +13,6 @@ import org.junit.Test;
 import org.junit.BeforeClass;
 
 /**
- *
  * @author Lucas Sampaio Dias
  */
 public class DeletaCargoTest {

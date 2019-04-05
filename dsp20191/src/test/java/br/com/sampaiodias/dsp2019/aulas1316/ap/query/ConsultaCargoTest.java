@@ -27,7 +27,7 @@ public class ConsultaCargoTest {
         DeletaCargo delete = new DeletaCargo();
         delete.deletaCargo(ID);
         InsertCargo insert = new InsertCargo();
-        insert.persisteCargo(new Cargo(ID, "Cargo B"));
+        insert.persisteCargo(new Cargo(ID, "Cargo C"));
     }
 
     @Test
@@ -39,7 +39,7 @@ public class ConsultaCargoTest {
         }catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("NOME: " + cargo.getNome());
+        
         Assert.assertEquals(ID, cargo.getId());
     }
     

@@ -15,7 +15,7 @@ import org.junit.Test;
 /**
  * @author Lucas Sampaio Dias
  */
-public class PersisteCargoTest {
+public class InsertCargoTest {
     
     private static final Long ID = new Long(99999999);
     
