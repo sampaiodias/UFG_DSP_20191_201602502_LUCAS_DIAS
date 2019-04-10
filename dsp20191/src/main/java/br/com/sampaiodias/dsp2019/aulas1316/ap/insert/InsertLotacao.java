@@ -21,6 +21,7 @@ public class InsertLotacao extends PersistenciaJdbc {
                 "VALUES('" + lotacao.getId() +
                 "','" + lotacao.getCargo().getId() +
                 "','" + lotacao.getDepartamento().getId() +
+                "','" + lotacao.getFuncionario().getId() +
                 "','" + lotacao.getDataInicialToString() +
                 "','" + lotacao.getDataFinalToString() +
                 "')";

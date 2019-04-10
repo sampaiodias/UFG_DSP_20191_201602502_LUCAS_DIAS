@@ -135,7 +135,8 @@ public class AlterarDados {
         //Cria um objeto de testes e persiste o objeto no banco
         Long ID = new Long(100);
         Lotacao lotacao = new Lotacao(ID, new Cargo(ID, "", new Double(1000)), 
-                new Departamento(ID, ""), new Date(), new Date());
+                new Departamento(ID, ""), new Funcionario(ID, ID, ""), 
+                new Date(), new Date());
         InsertLotacao insert = new InsertLotacao();
         insert.persisteLotacao(lotacao);
         

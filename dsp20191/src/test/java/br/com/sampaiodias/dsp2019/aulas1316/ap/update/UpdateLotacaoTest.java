@@ -10,6 +10,7 @@ import br.com.sampaiodias.dsp2019.aulas1316.ap.delete.DeletaLotacao;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.insert.InsertLotacao;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.model.Cargo;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.model.Departamento;
+import br.com.sampaiodias.dsp2019.aulas1316.ap.model.Funcionario;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.model.Lotacao;
 import java.util.Date;
 import org.junit.Assert;
@@ -36,7 +37,8 @@ public class UpdateLotacaoTest {
         InsertLotacao insert = new InsertLotacao();
         insert.persisteLotacao(
                 new Lotacao(ID, new Cargo(ID, "Cargo C", new Double(1000)), 
-                        new Departamento(ID, "Departamento C"), 
+                        new Departamento(ID, "Departamento C"),
+                        new Funcionario(ID, ID, ""),
                         inicio, fim));
     }
 
@@ -48,6 +50,7 @@ public class UpdateLotacaoTest {
         Date fim = Lotacao.DATE_FORMAT.parse("05/12/2015");
         Lotacao lot = new Lotacao(ID, new Cargo(ID, "Cargo C", new Double(1000)), 
                         new Departamento(ID, "Departamento C"), 
+                        new Funcionario(ID, ID, ""),
                         inicio, fim);
         
         try {

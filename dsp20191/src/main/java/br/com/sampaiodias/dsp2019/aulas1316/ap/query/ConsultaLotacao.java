@@ -20,7 +20,7 @@ public class ConsultaLotacao extends PersistenciaJdbc {
     private Lotacao lotacao;
     
     public ConsultaLotacao() {
-        lotacao = new Lotacao(null, null, null, new Date(), new Date());
+        lotacao = new Lotacao(null, null, null, null, new Date(), new Date());
     }
 
     public Lotacao consultaPorId(Long id) throws Exception{
@@ -37,6 +37,7 @@ public class ConsultaLotacao extends PersistenciaJdbc {
                 lotacao.setId(rs.getLong("ID"));
                 lotacao.setCargo(rs.getLong("ID_CARGO"));
                 lotacao.setDepartamento(rs.getLong("ID_DEPARTAMENTO"));
+                lotacao.setFuncionario(rs.getLong("ID_FUNCIONARIO"));
                 lotacao.setDataInicial(rs.getString("DATA_INICIAL"));
                 lotacao.setDataInicial(rs.getString("DATA_FINAL"));
             }

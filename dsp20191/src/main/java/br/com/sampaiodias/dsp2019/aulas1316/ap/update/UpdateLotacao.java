@@ -20,6 +20,7 @@ public class UpdateLotacao extends PersistenciaJdbc {
                 "SET ID = '" + lotacao.getId() +
                 "', ID_CARGO = '" + lotacao.getCargo().getId() +
                 "', ID_DEPARTAMENTO = '" + lotacao.getDepartamento().getId() +
+                "', ID_FUNCIONARIO = '" + lotacao.getFuncionario().getId() +
                 "', DATA_INICIAL = '" + lotacao.getDataInicialToString() +
                 "', DATA_FINAL = '" + lotacao.getDataFinalToString() +
                 "' WHERE ID = " + lotacao.getId();

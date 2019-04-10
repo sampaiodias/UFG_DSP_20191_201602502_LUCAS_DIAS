@@ -30,7 +30,8 @@ public class InsertLotacaoTest {
     @Test
     public void testPersisteLotacao() throws Exception {
         boolean result;
-        Lotacao lotacao = new Lotacao(ID, ID, ID, "01/02/2003", "10/12/2012");
+        Lotacao lotacao = 
+                new Lotacao(ID, ID, ID, ID, "01/02/2003", "10/12/2012");
         
         try{
             result = 

@@ -8,6 +8,7 @@ package br.com.sampaiodias.dsp2019.aulas1316.ap.model;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.create.TableCreateCargo;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.query.ConsultaCargo;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.query.ConsultaDepartamento;
+import br.com.sampaiodias.dsp2019.aulas1316.ap.query.ConsultaFuncionario;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -24,24 +25,28 @@ public class Lotacao {
     private Date dataFinal;
     private Cargo cargo;
     private Departamento departamento;
+    private Funcionario funcionario;
     
     public static final SimpleDateFormat DATE_FORMAT = 
             new SimpleDateFormat("dd/MM/yyyy");
     
     public Lotacao(Long id, Cargo cargo, Departamento departamento, 
-            Date dataInicial, Date dataFinal) {
+            Funcionario funcionario, Date dataInicial, Date dataFinal) {
         this.id = id;
         this.dataInicial = dataInicial;
         this.dataFinal = dataFinal;
         this.cargo = cargo;
         this.departamento = departamento;
+        this.funcionario = funcionario;
     }
     
-    public Lotacao(Long id, Long idCargo, Long idDepartamento,
-            String dataInicial, String dataFinal) throws Exception {
+    public Lotacao(Long id, Long idCargo, Long idDepartamento, 
+            Long idFuncionario, String dataInicial, String dataFinal) 
+            throws Exception {
         this.id = id;
         setCargo(idCargo);
         setDepartamento(idDepartamento);
+        setFuncionario(idFuncionario);
         setDataInicial(dataInicial);
         setDataFinal(dataFinal);
     }
@@ -118,6 +123,19 @@ public class Lotacao {
 
     public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
+    }
+    
+    public Funcionario getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
+    }
+    
+    public void setFuncionario(Long id) throws Exception {
+        Funcionario f = new ConsultaFuncionario().consultaPorId(id);
+        setFuncionario(f);
     }
     
     private String getDiaFormatado(int dia) {

@@ -9,6 +9,7 @@ import br.com.sampaiodias.dsp2019.aulas1316.ap.create.TableCreateLotacao;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.insert.InsertLotacao;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.model.Cargo;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.model.Departamento;
+import br.com.sampaiodias.dsp2019.aulas1316.ap.model.Funcionario;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.model.Lotacao;
 import java.util.Date;
 import org.junit.Assert;
@@ -35,7 +36,7 @@ public class DeletaLotacaoTest {
         insert.persisteLotacao(
                 new Lotacao(ID, new Cargo(ID, "Cargo C", new Double(1000)), 
                         new Departamento(ID, "Departamento C"), 
-                        inicio, fim));
+                        new Funcionario(ID, ID, ""), inicio, fim));
     }
 
     @Test
