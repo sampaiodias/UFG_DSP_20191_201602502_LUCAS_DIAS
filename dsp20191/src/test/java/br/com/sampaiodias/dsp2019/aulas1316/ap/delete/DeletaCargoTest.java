@@ -24,7 +24,7 @@ public class DeletaCargoTest {
         TableCreateCargo create = new TableCreateCargo();
         create.criaTabela();
         InsertCargo p = new InsertCargo();
-        p.persisteCargo(new Cargo(ID, "Cargo A"));
+        p.persisteCargo(new Cargo(ID, "Cargo A", new Double(1000)));
     }
 
     @Test

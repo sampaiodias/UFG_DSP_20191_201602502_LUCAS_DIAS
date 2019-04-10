@@ -12,10 +12,12 @@ public class Cargo {
     
     private Long id;
     private String nome;
+    private Double salario;
 
-    public Cargo(Long id, String nome) {
+    public Cargo(Long id, String nome, Double salario) {
         this.id = id;
         this.nome = nome;
+        this.salario = salario;
     }
 
     public Long getId() {
@@ -32,5 +34,13 @@ public class Cargo {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+    
+    public Double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(Double salario) {
+        this.salario = salario;
     }
 }

@@ -20,6 +20,7 @@ public class InsertCargo extends PersistenciaJdbc {
         String sql = "INSERT INTO CARGO " +
                 "VALUES('" + cargo.getId() +
                 "','" + cargo.getNome() +
+                "','" + cargo.getSalario()+
                 "')";
 
         stmt.executeUpdate(sql);

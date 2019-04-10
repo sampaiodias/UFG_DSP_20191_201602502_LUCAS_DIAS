@@ -54,7 +54,7 @@ public class AlterarDados {
         table.criaTabela();
         
         //Cria um objeto de testes e persiste o objeto no banco
-        Cargo cargo = new Cargo(new Long(100), "A");
+        Cargo cargo = new Cargo(new Long(100), "A", new Double(1000));
         InsertCargo insert = new InsertCargo();
         insert.persisteCargo(cargo);
         
@@ -134,7 +134,7 @@ public class AlterarDados {
         
         //Cria um objeto de testes e persiste o objeto no banco
         Long ID = new Long(100);
-        Lotacao lotacao = new Lotacao(ID, new Cargo(ID, ""), 
+        Lotacao lotacao = new Lotacao(ID, new Cargo(ID, "", new Double(1000)), 
                 new Departamento(ID, ""), new Date(), new Date());
         InsertLotacao insert = new InsertLotacao();
         insert.persisteLotacao(lotacao);

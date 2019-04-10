@@ -30,7 +30,7 @@ public class InsertCargoTest {
     @Test
     public void testPersisteCargo() throws Exception {
         boolean result;
-        Cargo cargo = new Cargo(ID, "Cargo A");
+        Cargo cargo = new Cargo(ID, "Cargo A", new Double(1000));
         try{
             result = new InsertCargo().persisteCargo(cargo);
         }catch (Exception e){

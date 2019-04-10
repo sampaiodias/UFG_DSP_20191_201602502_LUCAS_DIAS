@@ -19,7 +19,8 @@ public class TableCreateCargo extends PersistenciaJdbc {
 
         String sql = "CREATE TABLE IF NOT EXISTS CARGO(\n" +
                 "ID LONG NOT NULL PRIMARY KEY,\n" +
-                "NOME VARCHAR(100) NOT NULL\n" +
+                "NOME VARCHAR(100) NOT NULL,\n" +
+                "SALARIO DOUBLE NOT NULL\n" +
                 ")";
 
         stmt.executeUpdate(sql);

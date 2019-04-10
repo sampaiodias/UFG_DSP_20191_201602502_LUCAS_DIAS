@@ -33,7 +33,7 @@ public class DeletaLotacaoTest {
         
         InsertLotacao insert = new InsertLotacao();
         insert.persisteLotacao(
-                new Lotacao(ID, new Cargo(ID, "Cargo C"), 
+                new Lotacao(ID, new Cargo(ID, "Cargo C", new Double(1000)), 
                         new Departamento(ID, "Departamento C"), 
                         inicio, fim));
     }

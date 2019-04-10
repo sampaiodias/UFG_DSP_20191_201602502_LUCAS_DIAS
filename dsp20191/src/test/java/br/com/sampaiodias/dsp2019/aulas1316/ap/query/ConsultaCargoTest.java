@@ -27,12 +27,12 @@ public class ConsultaCargoTest {
         DeletaCargo delete = new DeletaCargo();
         delete.deletaCargo(ID);
         InsertCargo insert = new InsertCargo();
-        insert.persisteCargo(new Cargo(ID, "Cargo C"));
+        insert.persisteCargo(new Cargo(ID, "Cargo C", new Double(1000)));
     }
 
     @Test
     public void testConsultaPorId() throws Exception {
-        Cargo cargo = new Cargo(null, null);
+        Cargo cargo = new Cargo(null, null, new Double(1000));
         
         try{
             cargo = new ConsultaCargo().consultaPorId(ID);

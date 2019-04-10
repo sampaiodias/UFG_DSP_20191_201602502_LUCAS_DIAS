@@ -35,7 +35,7 @@ public class UpdateLotacaoTest {
         
         InsertLotacao insert = new InsertLotacao();
         insert.persisteLotacao(
-                new Lotacao(ID, new Cargo(ID, "Cargo C"), 
+                new Lotacao(ID, new Cargo(ID, "Cargo C", new Double(1000)), 
                         new Departamento(ID, "Departamento C"), 
                         inicio, fim));
     }
@@ -46,7 +46,7 @@ public class UpdateLotacaoTest {
         UpdateLotacao update = new UpdateLotacao();
         Date inicio = Lotacao.DATE_FORMAT.parse("05/05/2003");
         Date fim = Lotacao.DATE_FORMAT.parse("05/12/2015");
-        Lotacao lot = new Lotacao(ID, new Cargo(ID, "Cargo C"), 
+        Lotacao lot = new Lotacao(ID, new Cargo(ID, "Cargo C", new Double(1000)), 
                         new Departamento(ID, "Departamento C"), 
                         inicio, fim);
         

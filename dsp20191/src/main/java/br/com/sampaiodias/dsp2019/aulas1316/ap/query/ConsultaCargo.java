@@ -18,7 +18,7 @@ public class ConsultaCargo extends PersistenciaJdbc {
     private Cargo cargo;
 
     public ConsultaCargo() {
-        cargo = new Cargo(null, null);
+        cargo = new Cargo(null, null, null);
     }
     
     public Cargo consultaPorId(Long id) throws Exception{
@@ -34,6 +34,7 @@ public class ConsultaCargo extends PersistenciaJdbc {
             while(rs.next()){
                 cargo.setId(rs.getLong("ID"));
                 cargo.setNome(rs.getString("NOME"));
+                cargo.setSalario(rs.getDouble("SALARIO"));
             }
 
             rs.close();

@@ -19,6 +19,7 @@ public class UpdateCargo extends PersistenciaJdbc {
         String sql = "UPDATE CARGO " +
                 "SET ID = '" + cargo.getId() +
                 "', NOME = '" + cargo.getNome() +
+                "', SALARIO = '" + cargo.getSalario()+
                 "' WHERE ID = " + cargo.getId();
         
         stmt.executeUpdate(sql);

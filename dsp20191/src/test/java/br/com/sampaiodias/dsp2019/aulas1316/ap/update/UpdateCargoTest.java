@@ -27,7 +27,7 @@ public class UpdateCargoTest {
         DeletaCargo delete = new DeletaCargo();
         delete.deletaCargo(ID);
         InsertCargo insert = new InsertCargo();
-        insert.persisteCargo(new Cargo(ID, "Cargo B"));
+        insert.persisteCargo(new Cargo(ID, "Cargo B", new Double(1000)));
     }
 
     @Test
@@ -36,7 +36,8 @@ public class UpdateCargoTest {
         UpdateCargo update = new UpdateCargo();
                 
         try{
-            result = update.atualizaCargo(new Cargo(ID, "Cargo C"));
+            result = update.atualizaCargo(
+                    new Cargo(ID, "Cargo C", new Double(1000)));
         }catch (Exception e) {
             result = false;
             e.printStackTrace();
