@@ -11,7 +11,7 @@ import br.com.sampaiodias.dsp2019.aulas1316.ap.delete.DeletaFuncionario;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.delete.DeletaLotacao;
 
 /**
- * Exercício que resolve a questão 3 da Atividade Pratica - aulas1720
+ * Exercício que resolve a questão 5 da Atividade Pratica - aulas1720
  * @author Lucas Sampaio Dias
  */
 public class RemoverDados {

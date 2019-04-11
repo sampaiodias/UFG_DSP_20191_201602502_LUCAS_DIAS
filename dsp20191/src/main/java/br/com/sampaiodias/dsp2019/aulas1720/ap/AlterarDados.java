@@ -32,7 +32,7 @@ import br.com.sampaiodias.dsp2019.aulas1316.ap.update.UpdateLotacao;
 import java.util.Date;
 
 /**
- * Exercício que resolve a questão 3 da Atividade Pratica - aulas1720
+ * Exercício que resolve a questão 4 da Atividade Pratica - aulas1720
  * @author Lucas Sampaio Dias
  */
 public class AlterarDados {
@@ -43,7 +43,7 @@ public class AlterarDados {
         alteraLotacao();
     }
     
-    private static void alteraCargo() throws Exception {
+    public static void alteraCargo() throws Exception {
         //Exclui todos os dados para que não exista um objeto
         //igual ao que será usado para o teste deste método
         TableDropCargo drop = new TableDropCargo();
@@ -69,7 +69,7 @@ public class AlterarDados {
                 query.consultaPorId(new Long(100)).getNome());
     }
     
-    private static void alteraDepartamento() throws Exception {
+    public static void alteraDepartamento() throws Exception {
         //Exclui todos os dados para que não exista um objeto
         //igual ao que será usado para o teste deste método
         TableDropDepartamento drop = new TableDropDepartamento();
@@ -95,7 +95,7 @@ public class AlterarDados {
                 query.consultaPorId(new Long(100)).getNome());
     }
     
-    private static void alteraFuncionario() throws Exception {
+    public static void alteraFuncionario() throws Exception {
         //Exclui todos os dados para que não exista um objeto
         //igual ao que será usado para o teste deste método
         TableDropFuncionario drop = new TableDropFuncionario();
@@ -122,7 +122,7 @@ public class AlterarDados {
                 query.consultaPorId(new Long(100)).getNome());
     }
     
-    private static void alteraLotacao() throws Exception {
+    public static void alteraLotacao() throws Exception {
         //Exclui todos os dados para que não exista um objeto
         //igual ao que será usado para o teste deste método
         TableDropLotacao drop = new TableDropLotacao();

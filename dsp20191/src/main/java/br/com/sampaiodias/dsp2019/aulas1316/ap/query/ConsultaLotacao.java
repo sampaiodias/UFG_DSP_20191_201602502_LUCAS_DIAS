@@ -10,6 +10,7 @@ import br.com.gilmarioarantes.jdbccrudv1.persistencia.base.PersistenciaJdbc;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.model.Lotacao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -51,5 +52,42 @@ public class ConsultaLotacao extends PersistenciaJdbc {
         }
         
         return lotacao;
+    }
+    
+    public ArrayList<Lotacao> consultaPorId(Long idCargo, Long idDepartamento) 
+            throws Exception{
+
+        preparaPersistencia();
+        ArrayList<Lotacao> lotacoes = new ArrayList<>();
+        
+        try {
+            String sql = "SELECT * FROM LOTACAO WHERE "
+                    + "ID_CARGO = ? AND ID_DEPARTAMENTO = ?";
+            PreparedStatement pstmt = connection.prepareStatement(sql);
+            pstmt.setLong(1,idCargo);
+            pstmt.setLong(2,idDepartamento);
+
+            ResultSet rs = pstmt.executeQuery(  );
+            while(rs.next()){
+                Lotacao lot = new Lotacao(
+                        rs.getLong("ID"),
+                        rs.getLong("ID_CARGO"),
+                        rs.getLong("ID_DEPARTAMENTO"),
+                        rs.getLong("ID_FUNCIONARIO"),
+                        rs.getString("DATA_INICIAL"),
+                        rs.getString("DATA_FINAL")
+                );
+                lotacoes.add(lot);
+            }
+
+            rs.close();
+            pstmt.close();
+            stmt.close();
+            connection.close();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        return lotacoes;
     }
 }
