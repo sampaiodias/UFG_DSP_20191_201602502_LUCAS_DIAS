@@ -54,7 +54,41 @@ public class ConsultaLotacao extends PersistenciaJdbc {
         return lotacao;
     }
     
-    public ArrayList<Lotacao> consultaPorId(Long idCargo, Long idDepartamento) 
+    public ArrayList<Lotacao> consultaTodos() 
+            throws Exception{
+
+        preparaPersistencia();
+        ArrayList<Lotacao> lotacoes = new ArrayList<>();
+        
+        try {
+            String sql = "SELECT * FROM LOTACAO";
+            PreparedStatement pstmt = connection.prepareStatement(sql);
+
+            ResultSet rs = pstmt.executeQuery(  );
+            while(rs.next()){
+                Lotacao lot = new Lotacao(
+                        rs.getLong("ID"),
+                        rs.getLong("ID_CARGO"),
+                        rs.getLong("ID_DEPARTAMENTO"),
+                        rs.getLong("ID_FUNCIONARIO"),
+                        rs.getString("DATA_INICIAL"),
+                        rs.getString("DATA_FINAL")
+                );
+                lotacoes.add(lot);
+            }
+
+            rs.close();
+            pstmt.close();
+            stmt.close();
+            connection.close();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        return lotacoes;
+    }
+    
+    public ArrayList<Lotacao> consultaTodos(Long idCargo, Long idDepartamento) 
             throws Exception{
 
         preparaPersistencia();

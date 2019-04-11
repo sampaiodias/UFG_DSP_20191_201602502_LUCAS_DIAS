@@ -14,6 +14,7 @@ import br.com.sampaiodias.dsp2019.aulas1316.ap.model.Lotacao;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.query.ConsultaCargo;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.query.ConsultaDepartamento;
 import br.com.sampaiodias.dsp2019.aulas1316.ap.query.ConsultaLotacao;
+import br.com.sampaiodias.dsp2019.aulas1316.ap.update.UpdateCargo;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -22,14 +23,19 @@ import java.util.Date;
  * @author Lucas Sampaio Dias
  */
 public class AlterarSalario {
+    
+    public static Double salario = new Double(2500);
+    public static Cargo cargo;
+    public static Departamento departamento;
+    
     public static void main(String[] args) throws Exception {
         AlterarDados.alteraCargo();
         AlterarDados.alteraDepartamento();
         AlterarDados.alteraFuncionario();
         AlterarDados.alteraLotacao();
         
-        Cargo cargo = new ConsultaCargo().consultaPorId(new Long(100));
-        Departamento departamento = 
+        cargo = new ConsultaCargo().consultaPorId(new Long(100));
+        departamento = 
                 new ConsultaDepartamento().consultaPorId(new Long(100));
         
         Funcionario f1 = new Funcionario(new Long(200), Long.MAX_VALUE, "João");
@@ -46,22 +52,34 @@ public class AlterarSalario {
         new InsertLotacao().persisteLotacao(lotacao1);
         new InsertLotacao().persisteLotacao(lotacao2);
         
-        Double salario = new Double(2500);
+
         alterarSalario(cargo, departamento, salario);
         imprimirFuncionariosComSalario(salario);
     }
     
     public static void alterarSalario(Cargo cargo, Departamento departamento,
             Double novoSalario) throws Exception {
-        ArrayList<Lotacao> lotacoes = new ConsultaLotacao().consultaPorId(
+        ArrayList<Lotacao> lotacoes = new ConsultaLotacao().consultaTodos(
                 cargo.getId(), departamento.getId());
         for(Lotacao lot : lotacoes) {
-            lot.getCargo().setSalario(novoSalario);
-            System.out.println("Novo salario: " + lot.getCargo().getSalario());
+            if (lot.getCargo().getId() == cargo.getId() &&
+                    lot.getDepartamento().getId() == departamento.getId()) {
+                lot.getCargo().setSalario(novoSalario);
+                new UpdateCargo().atualizaCargo(lot.getCargo());
+            }
         }
     }
     
-    public static void imprimirFuncionariosComSalario(Double salario) {
-        
+    public static void imprimirFuncionariosComSalario(Double salario) 
+            throws Exception {
+        ArrayList<Lotacao> lotacoes = new ConsultaLotacao().consultaTodos();
+        System.out.println("\nFuncionários com salário alterado:");
+        for(Lotacao lot : lotacoes) {
+            if (lot.getCargo().getSalario().equals(salario) &&
+                    lot.getCargo().getId() == cargo.getId() &&
+                    lot.getDepartamento().getId() == departamento.getId()) {
+                System.out.println(lot.getFuncionario().getNome());
+            }
+        }
     }
 }
