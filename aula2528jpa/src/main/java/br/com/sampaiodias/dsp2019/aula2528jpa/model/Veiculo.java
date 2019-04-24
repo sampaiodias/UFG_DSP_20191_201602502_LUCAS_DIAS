@@ -6,26 +6,23 @@
 
 package br.com.sampaiodias.dsp2019.aula2528jpa.model;
 
+import javax.persistence.*;
+import java.io.Serializable;
+
 /**
  * @author Lucas Sampaio Dias
  */
-public class Veiculo {
+@Entity
+public class Veiculo implements Serializable {
     
+    @Id
+    @GeneratedValue
     private Long id;
     private String marca;
     private String modelo;
     private Integer anoFabricacao;
     private Integer anoModelo;
     private Integer potenciaMotor;
-
-    public Veiculo(Long id, String marca, String modelo, Integer anoFabricacao, Integer anoModelo, Integer potenciaMotor) {
-        this.id = id;
-        this.marca = marca;
-        this.modelo = modelo;
-        this.anoFabricacao = anoFabricacao;
-        this.anoModelo = anoModelo;
-        this.potenciaMotor = potenciaMotor;
-    }
 
     public Long getId() {
         return id;
